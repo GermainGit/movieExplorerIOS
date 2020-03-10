@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zyf-9a-eds">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TP1_movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="579-BY-Kgj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2h-rg-yqn">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="973.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hot_Shots_2" translatesAutoresizingMaskIntoConstraints="NO" id="yUQ-JK-uH9">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="Zfk-Hh-kVW"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hots-shots" translatesAutoresizingMaskIntoConstraints="NO" id="Qqn-r7-lYh">
+                                                <rect key="frame" x="0.0" y="240" width="414" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="LpP-Bo-XM7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ce0-Wj-o0i">
+                                                <rect key="frame" x="20" y="460" width="374" height="513.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnA-0u-Ojq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Hot Shots!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZiK-Uj-dic">
+                                                                <rect key="frame" x="0.0" y="0.0" width="338" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <color key="textColor" red="1" green="0.17353334756117089" blue="0.09712967248044202" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1991" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7W-0E-6gw">
+                                                                <rect key="frame" x="338" y="0.0" width="36" height="24"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Des pilotes en l'air" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1W-Gn-A5h">
+                                                        <rect key="frame" x="0.0" y="34" width="374" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="84 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri3-ee-gIe">
+                                                        <rect key="frame" x="0.0" y="64.5" width="374" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action / Action-aventure" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCn-Vx-a0d">
+                                                        <rect key="frame" x="0.0" y="95" width="374" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hY-SU-Ldd">
+                                                        <rect key="frame" x="0.0" y="125.5" width="374" height="345"/>
+                                                        <string key="text">Dans cette parodie loufoque des films sur l'US Air Force, le lieutenant Topper Harley est un pilote de chasse talentueux mais complexé par le souvenir de son père qui jadis aurait été responsable de la mort de son coéquipier lors d'une mission dans les airs. Dans cette parodie loufoque des films sur l'US Air Force, le lieutenant Topper Harley est un pilote de chasse talentueux mais complexé par le souvenir de son père qui jadis aurait été responsable de la mort de son coéquipier lors d'une mission dans les airs.Dans cette parodie loufoque des films sur l'US Air Force, le lieutenant Topper Harley est un pilote de chasse talentueux mais complexé par le souvenir de son père qui jadis aurait été responsable de la mort de son coéquipier lors d'une mission dans les airs.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vB-is-ISo">
+                                                        <rect key="frame" x="0.0" y="480.5" width="374" height="33"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <state key="normal" title="Voir la bande annonce">
+                                                            <color key="titleColor" red="1" green="0.1735333476" blue="0.097129672479999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="btnAnnoncePush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tJf-AL-Qtn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Qqn-r7-lYh" secondAttribute="trailing" id="77N-6p-75U"/>
+                                            <constraint firstAttribute="trailing" secondItem="yUQ-JK-uH9" secondAttribute="trailing" id="8X9-qL-CER"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ce0-Wj-o0i" secondAttribute="trailing" constant="20" id="DZh-Pl-WlW"/>
+                                            <constraint firstItem="Qqn-r7-lYh" firstAttribute="top" secondItem="yUQ-JK-uH9" secondAttribute="bottom" constant="-60" id="FoE-Gb-1bU"/>
+                                            <constraint firstItem="yUQ-JK-uH9" firstAttribute="leading" secondItem="f2h-rg-yqn" secondAttribute="leading" id="Sd8-Qt-R8u"/>
+                                            <constraint firstItem="yUQ-JK-uH9" firstAttribute="top" secondItem="f2h-rg-yqn" secondAttribute="top" id="dwW-RY-seu"/>
+                                            <constraint firstItem="Ce0-Wj-o0i" firstAttribute="top" secondItem="Qqn-r7-lYh" secondAttribute="bottom" constant="20" id="jOg-SL-hNI"/>
+                                            <constraint firstItem="Ce0-Wj-o0i" firstAttribute="leading" secondItem="f2h-rg-yqn" secondAttribute="leading" constant="20" id="uzL-Ld-bSf"/>
+                                            <constraint firstItem="Qqn-r7-lYh" firstAttribute="leading" secondItem="f2h-rg-yqn" secondAttribute="leading" id="xk0-i1-MLa"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ce0-Wj-o0i" secondAttribute="bottom" id="y3N-oy-Pia"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="f2h-rg-yqn" firstAttribute="leading" secondItem="GKu-cr-h3v" secondAttribute="leading" id="Kfn-Uv-wMH"/>
+                                    <constraint firstItem="f2h-rg-yqn" firstAttribute="top" secondItem="GKu-cr-h3v" secondAttribute="top" id="MgZ-IK-cHC"/>
+                                    <constraint firstItem="GKu-cr-h3v" firstAttribute="bottom" secondItem="f2h-rg-yqn" secondAttribute="bottom" id="ZeR-Mm-Ym6"/>
+                                    <constraint firstItem="GKu-cr-h3v" firstAttribute="trailing" secondItem="f2h-rg-yqn" secondAttribute="trailing" id="kX2-wE-afm"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="GKu-cr-h3v"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="BAW-Ws-Gnd"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="579-BY-Kgj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K2g-Bv-m9f"/>
+                            <constraint firstItem="579-BY-Kgj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N2R-Oi-MnO"/>
+                            <constraint firstAttribute="bottom" secondItem="579-BY-Kgj" secondAttribute="bottom" id="b4I-bX-2Iw"/>
+                            <constraint firstItem="f2h-rg-yqn" firstAttribute="width" secondItem="BAW-Ws-Gnd" secondAttribute="width" id="nEK-vz-yTE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="579-BY-Kgj" secondAttribute="trailing" id="z03-Ix-FV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAnnonce" destination="6vB-is-ISo" id="3ut-el-CHu"/>
+                        <outlet property="movieCategorieLabel" destination="zCn-Vx-a0d" id="URb-Yf-n1v"/>
+                        <outlet property="movieCoverImg" destination="yUQ-JK-uH9" id="tBp-AQ-cnh"/>
+                        <outlet property="movieDateLabel" destination="e7W-0E-6gw" id="fJp-M9-jb3"/>
+                        <outlet property="movieDurationLabel" destination="ri3-ee-gIe" id="fks-oY-wZ8"/>
+                        <outlet property="moviePosterImg" destination="Qqn-r7-lYh" id="uQ1-dT-baZ"/>
+                        <outlet property="movieSubtitleLabel" destination="s1W-Gn-A5h" id="zh0-Iu-rS8"/>
+                        <outlet property="movieSynopsLabel" destination="2hY-SU-Ldd" id="LC8-tA-9gZ"/>
+                        <outlet property="movieTitleLabel" destination="ZiK-Uj-dic" id="24e-9o-5TI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Movie List View Controller-->
+        <scene sceneID="4eV-9F-XBs">
+            <objects>
+                <viewController id="Zyf-9a-eds" customClass="MovieListViewController" customModule="TP1_movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQc-uV-iHq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0TJ-mH-g0e">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0TJ-mH-g0e" firstAttribute="leading" secondItem="ZYr-SE-pok" secondAttribute="leading" id="0D4-tv-Elb"/>
+                            <constraint firstItem="0TJ-mH-g0e" firstAttribute="top" secondItem="ZYr-SE-pok" secondAttribute="top" id="II5-PS-dV5"/>
+                            <constraint firstItem="ZYr-SE-pok" firstAttribute="bottom" secondItem="0TJ-mH-g0e" secondAttribute="bottom" id="TX3-Bm-FAg"/>
+                            <constraint firstItem="ZYr-SE-pok" firstAttribute="trailing" secondItem="0TJ-mH-g0e" secondAttribute="trailing" id="VT2-U5-h4F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZYr-SE-pok"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0TJ-mH-g0e" id="mz9-Qg-0a5"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showMovieDetail" id="56G-yh-hln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doM-7D-lbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="783"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hot_Shots_2" width="1200" height="675"/>
+        <image name="hots-shots" width="1000" height="1500"/>
+    </resources>
+</document>
