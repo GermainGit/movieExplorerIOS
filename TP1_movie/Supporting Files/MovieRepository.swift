@@ -39,7 +39,6 @@ struct MovieHttpRequest {
     
     func request(completionHandler: @escaping ((Data?) -> Void)){
         if let url = completeRequest {
-            print(url)
             session.dataTask(with: url, completionHandler: { (data, response, err) in
                 if let data = data {
                     completionHandler(data)

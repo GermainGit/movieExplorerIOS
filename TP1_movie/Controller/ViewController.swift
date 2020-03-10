@@ -37,18 +37,12 @@ class ViewController: UIViewController {
         let movieRequest: MovieHttpRequest = MovieHttpRequest(requestUrl: requestUrl, hasVideo: true)
                 
         movieRequest.request() { data in
-            print(requestUrl)
             if let data = data {
-                print("CATCH DATA")
                 if let movieDetail = try? JSONDecoder().decode(MovieDetailResponse.self, from: data) {
                     DispatchQueue.main.async {
-                        print("CONVERT DATA")
                         // Check the properties of the movie
-                        
                         self.movie = Movie(from: movieDetail)
-                        
                         // Set Data after catch movie information
-                        
                         self.setDetailData()
                     }
                 }
@@ -80,7 +74,6 @@ class ViewController: UIViewController {
         }
         /// TODO :
         if let categories = movie.categories{
-            print(categories)
             var movieCategories: [String] = []
             for categorie in categories{
                 if let categorie = categorie.name{
@@ -114,10 +107,7 @@ class ViewController: UIViewController {
     // TODO : get the real trailer link
     
     @IBAction func btnAnnoncePush(_ sender: Any) {
-        guard let id = movie?.id else { return }
-        let movieManager: MovieManager = MovieManager()
-        let movieTrailer: String = movieManager.getMovieTrailer(movieId: id)
-        guard let url = URL(string: movieTrailer) else { return }
+        guard let url = movie?.videoURL else { return }
         UIApplication.shared.open(url)
         btnAnnonce.titleLabel?.textColor = UIColor.gray
     }

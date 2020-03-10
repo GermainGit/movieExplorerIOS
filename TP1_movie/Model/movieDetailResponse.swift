@@ -38,11 +38,39 @@ struct Genre: Codable {
 }
 
 struct VideoList: Codable {
-    let results: [Video]?
+    let results: [Video]
+    
+    func getTrailers(targetSite: String = "youtube") -> [Video] {
+        return results.filter { (movieVideo) in
+            movieVideo.type.lowercased() == "trailer" && movieVideo.site.lowercased() == targetSite
+        }
+    }
+    
+    func getLastTrailer() -> Video? {
+        let trailers = self.getTrailers()
+        guard let lastTrailer = trailers.last else {
+            return nil
+        }
+        
+        return lastTrailer
+    }
 }
 
 struct Video: Codable {
-    let key: String?
-    let id: Int?
+    let id, key: String
+    let name, site: String
+    let size: Int
+    let type: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case key, name, site, size, type
+    }
+    
+    func getYoutubeLink() -> URL? {
+        let ytUrl = "https://www.youtube.com/watch?v=\(key)"
+    
+        return URL(string: ytUrl)
+    }
 }
 

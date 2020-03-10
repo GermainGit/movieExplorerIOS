@@ -19,7 +19,7 @@ struct Movie: Codable {
     let duration: Int?
     let date: Int?
     let categories: [Genre]?
-    let trailerUrl: String?
+    let videoURL: URL?
 
     init?(from movieResponse: MovieResponse) {
         guard let title = movieResponse.title,
@@ -32,10 +32,10 @@ struct Movie: Codable {
         self.synops = movieResponse.overview
         self.cover = "https://image.tmdb.org/t/p/w300" + cover
         self.categories = []
-        self.trailerUrl = nil
         self.subtitle = nil
         self.poster = nil
         self.duration = nil
+        self.videoURL = nil
     }
     
     init?(from movieDetailResponse: MovieDetailResponse) {
@@ -49,7 +49,6 @@ struct Movie: Codable {
         self.synops = movieDetailResponse.overview
         self.cover = "https://image.tmdb.org/t/p/w300" + cover
         self.categories = movieDetailResponse.genres
-        self.trailerUrl = nil
         self.subtitle = movieDetailResponse.tagline
         if let poster = movieDetailResponse.posterPath {
             self.poster = "https://image.tmdb.org/t/p/w300" + poster
@@ -57,5 +56,7 @@ struct Movie: Codable {
             self.poster = nil
         }
         self.duration = movieDetailResponse.runtime
+        self.videoURL = movieDetailResponse.videos?.getLastTrailer()?.getYoutubeLink()
+        
     }
 }
